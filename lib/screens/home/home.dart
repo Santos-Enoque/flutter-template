@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_template_project/helpers/style.dart';
 import 'package:flutter_template_project/screens/login/login.dart';
+import 'package:flutter_template_project/widgets/custom_button.dart';
 import 'package:flutter_template_project/widgets/custom_text.dart';
 import 'package:get/get.dart';
 
@@ -11,7 +11,6 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return DefaultTabController(
               length: 3,
-
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -43,9 +42,88 @@ class HomeScreen extends StatelessWidget {
         body: TabBarView(
             children: [
               Center(child: CustomText(text: "Screen one",),),
-                           Center(child: CustomText(text: "Screen two",),),
-              Center(child: CustomText(text: "Screen three",),),
+              Center(child: CustomText(text: "Screen two",),),
+             Column(
+               children: [
+                 SizedBox(height: 40,),
+                 Container(
+                   width: 160,
+                   child: CustomButton(
+                     title: 'Button one',
+                     onTap: (){
+                     },
+                   ),
+                 ),
 
+                 SizedBox(height: 30,),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                       width: 160,
+                       child: CustomButton(
+                         title: 'Button one',
+                         onTap: (){},
+                       ),
+                 ),
+
+                     Container(
+                       width: 160,
+                       child: CustomButton(
+                         title: 'Button one',
+                         onTap: (){},
+                       ),
+                 ),
+                    ],
+                  ),
+
+                 SizedBox(height: 30,),
+
+                  Container(
+                   width: 160,
+                   child: CustomButton(
+                     title: 'Button one',
+                     onTap: (){},
+                   ),
+                 ),
+
+                 SizedBox(height: 30,),
+
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Container(
+                       width: 160,
+                       child: CustomButton(
+                         title: 'Button one',
+                         onTap: (){},
+                       ),
+                 ),
+
+                     Container(
+                       width: 160,
+                       child: CustomButton(
+                         title: 'Button one',
+                         onTap: (){},
+                       ),
+                 ),
+                    ],
+                  ),
+
+                 SizedBox(height: 30,),
+
+                       Container(
+                       width: 160,
+                       child: CustomButton(
+                         title: 'Button one',
+                         onTap: (){},
+                       ),
+                 ),
+
+
+               ],
+             )
             ],
           ),
       ),
